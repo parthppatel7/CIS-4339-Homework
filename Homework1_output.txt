@@ -1,0 +1,14 @@
+Parth Patel
+UH ID# 1837355
+
+--> Exercise Part A Output
+1. 'switched to db employees'
+2. admin                40.00 KiB
+   config              108.00 KiB
+   local                72.00 KiB
+   reporting            80.00 KiB
+   restaurantbookings  144.00 KiB
+
+--> Exercise Part B Output
+
+
