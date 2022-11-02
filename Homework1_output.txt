@@ -2,13 +2,89 @@ Parth Patel
 UH ID# 1837355
 
 --> Exercise Part A Output
-1. 'switched to db employees'
-2. admin                40.00 KiB
+
+1. Entering command use employees, it gave me an output saying - 'switched to db employees'
+
+2. Entering command show dbs, it gave me an output
+   admin                40.00 KiB
    config              108.00 KiB
    local                72.00 KiB
    reporting            80.00 KiB
    restaurantbookings  144.00 KiB
+   employees              2.00 KiB
 
 --> Exercise Part B Output
 
+1. Entering command use tempory, it gave me an output saying - 'switched to db temporary'
+   Entering command db.createCollection('test'); it gave me an output saying - { ok: 1 }
+   Entering command db.dropDatabase();, it gave me an output saying  - { ok: 1, dropped: 'temporary' }
+   Entering command show dbs, it gave me an output - 
+   admin                40.00 KiB
+   config               96.00 KiB
+   local                72.00 KiB
+   reporting            80.00 KiB
+   restaurantbookings  144.00 KiB
+   employees             2.00 KiB
 
+2. Entering command use employees, it gave me an output saying - 'switched to db employees'
+   Entering command db.createCollection('IT');, it gave me an output saying - { ok: 1 }
+   Entering command db.createCollection('Accounting');, it gave me an output saying - { ok: 1 }
+   Entering command db.createCollection('Help Desk');, it gave me an output saying - { ok: 1 }
+   
+3. Entering command show collections, it gave me an output - 
+   Accounting
+   IT
+   Marketing
+
+--> Exercise Part C Output
+1. Entering command to insert data three times into Accounting collection, it gave me output saying - 
+   { acknowledged: true,
+   insertedId: ObjectId("6361ee0b8e98bd21a25018cb") } -- Here ObjectId are automated as many new data is filled in
+   Entering command to insert data three times into IT collection, it gave me output saying - 
+   { acknowledged: true,
+   insertedId: ObjectId("6361ef918e98bd21a25018ce") } -- Here ObjectId are automated as many new data is filled in
+   Entering command to insert data three times into Marketing collection, it gave me output saying - 
+   { acknowledged: true,
+   insertedId: ObjectId("6361f67bf2530e538c07734f") -- Here ObjectId are automated as many new data is filled in
+
+2. Entering command db.Accounting.find() to find data in Accounting collection, it gave me output -
+   { _id: ObjectId("6361ee0b8e98bd21a25018cb"),
+   employeeid: 1,
+   name: 'Peter Parker',
+   salary: 70000 }
+   { _id: ObjectId("6361ee238e98bd21a25018cc"),
+   employeeid: 2,
+   name: 'Clark Kent',
+   salary: 80000 }
+   { _id: ObjectId("6361ee438e98bd21a25018cd"),
+   employeeid: 3,
+   name: 'John Snow',
+   salary: 85000 }
+
+   Entering command db.IT.find() to find data in IT collection, it gave me output -
+   { _id: ObjectId("6361ef918e98bd21a25018ce"),
+   employeeid: 1,
+   name: 'Tom Brady',
+   salary: 90000 }
+   { _id: ObjectId("6361efcd8e98bd21a25018cf"),
+   employeeid: 2,
+   name: 'Luke Skywalker',
+   salary: 80000 }
+   { _id: ObjectId("6361f00a8e98bd21a25018d0"),
+   employeeid: 3,
+   name: 'Jonny Bravo',
+   salary: 750000 }
+  
+   Entering command db.Marketing.find() to find data in IT collection, it gave me output -
+   { _id: ObjectId("6361f67bf2530e538c07734f"),
+   employeeid: 1,
+   name: 'Mike Wazowski',
+   salary: 75000 }
+   { _id: ObjectId("6361f6caf2530e538c077350"),
+   employeeid: 2,
+   name: 'Michael Jordan',
+   salary: 95000 }
+   { _id: ObjectId("6361f6dff2530e538c077351"),
+   employeeid: 3,
+   name: 'Michael Jackson',
+   salary: 80000 }
