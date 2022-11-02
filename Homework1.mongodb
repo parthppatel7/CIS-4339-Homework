@@ -1,8 +1,100 @@
 //Parth Patel
 //UH ID# 1837355
 
+//All following code are written and compiled in Mongoose Shell MongoDB 
+
 // Exercise Part A
-1. use employee //The use command helps to make the 'employee' database
-2. show dbs //This command helps us to view all the databases in the connection
+1. use employees //The use command helps to make the 'employees' database.
+
+2. show dbs //This command helps us to view all the databases in the connection.
 
 //Exercise Part B
+1. show dbs //This command helps us to view all the databases in the connection.
+   use temporary //The use command helps to make the 'temporary' database.
+   db.createCollection('test'); //This command helps to create collection named 'test'.
+   show dbs //This command helps us to view the new added database'temporary' in the connection.
+   show collections //This command helps us to view the new added collection 'test' in the connection.
+   db.dropDatabase(); //This command helped me to drop the database 'temporary'.
+   show dbs //This command helps us to view that we have droped the database 'temporary'.
+
+2. use employees //The use command helps to switch to the 'employees' database.
+   db.createCollection('Information Technology'); //This command helps to create collection named 'Information Technology'.
+   db.createCollection('Accounting'); //This command helps to create collection named 'Accounting'.
+   db.createCollection('Help Desk'); //This command helps to create collection named 'Help Desk'.
+
+3. show collections //This commands shows all the collections in 'employees' database.
+
+//Exerice Part C
+1. //Accounting collection
+   //Here we are inserting the first data set into Accounting collection using insert command
+   db.techdep.insert(
+   {
+      employeeid: 01,
+      name: "Peter Parker",
+      salary: 70000
+   })
+   //Here we are inserting the second data set into Accounting collection using insert command
+   db.techdep.insert(
+   {
+      employeeid: 02,
+      name: "Clark Kent",
+      salary: 80000
+   })
+   //Here we are inserting the third data set into Accounting collection using insert command
+   db.techdep.insert(
+   {
+      employeeid: 03,
+      name: "John Snow",
+      salary: 85000
+   })
+
+   //IT collection 
+   //Here we are inserting the first data set into IT collection using insert command
+   db.techdep.insert(
+   {
+      employeeid: 01,
+      name: "Tom Brady",
+      salary: 90000 
+   })
+   //Here we are inserting the second data set into IT collection using insert command
+   db.techdep.insert(
+   {
+      employeeid: 02,
+      name: "Luke Skywalker",
+      salary: 80000
+   })
+   //Here we are inserting the third data set into IT collection using insert command
+   db.techdep.insert(
+   {
+      employeeid: 03,
+      name: "Jonny Bravo",
+      salary: 75000
+   })
+
+   //Marketing collection
+   //Here we are inserting the first data set into Marketing collection using insert command
+   db.techdep.insert(
+   {
+      employeeid: 01,
+      name: "Mike Wazowski",
+      salary: 75000  
+   })
+   //Here we are inserting the second data set into Marketing collection using insert command
+   db.techdep.insert(
+   {
+      employeeid: 02,
+      name: "Michael Jordan",
+      salary: 95000
+   })
+   //Here we are inserting the third data set into Marketing collection using insert command
+   db.techdep.insert(
+   {
+      employeeid: 03,
+      name: "Michael Jackson",
+      salary: 80000 
+   })
+
+2. db.Accounting.find() //This command displays all the data present in the Accounting collection
+   db.IT.find() //This command displays all the data present in the IT collection
+   db.Marketing.find() //This command displays all the data present in the Marketing collection
+
