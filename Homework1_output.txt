@@ -11,7 +11,7 @@ UH ID# 1837355
    local                72.00 KiB
    reporting            80.00 KiB
    restaurantbookings  144.00 KiB
-   employees              2.00 KiB
+   employees             2.00 KiB
 
 --> Exercise Part B Output
 
@@ -88,3 +88,45 @@ UH ID# 1837355
    employeeid: 3,
    name: 'Michael Jackson',
    salary: 80000 }
+
+-->Exercise Part D
+1. Entering three new sets into IT collection, it gave me output - { acknowledged: true,
+  insertedIds: { '0': ObjectId("6363277a4b5a870c209fdd10") } }
+
+2. Entering the command db.IT.find({employeeid: 1}), it gave me output - 
+   { _id: ObjectId("6361ef918e98bd21a25018ce"),
+     employeeid: 1,
+     name: 'Tom Brady',
+     salary: 90000 } 
+   Entering the command db.Marketing.find({employeeid: 3}), it gave me output - 
+   { _id: ObjectId("6361f6dff2530e538c077351"),
+     employeeid: 3,
+     name: 'Michael Jackson',
+     salary: 80000 }
+
+3. Entering the command db.Accounting.find({name: "Luke Skywalker"}), it gave me output -
+   { _id: ObjectId("6361efcd8e98bd21a25018cf"),
+    employeeid: 2,
+    name: 'Luke Skywalker',
+    salary: 80000 }
+   Entering the command db.IT.find({name: "'Syed',"}), it gave me output -
+   { _id: ObjectId("6363277a4b5a870c209fdd0f"),
+     employeeid: 2455,
+     name: 'Syed',
+     salary: 90000 }
+
+4. Entering the command db.IT.find({name: /^John/}), it gave me output -
+   { _id: ObjectId("6363277a4b5a870c209fdd0e"),
+     employeeid: 1187,
+     name: 'John Steight',
+     salary: 75000 }
+
+5. Entering the command db.IT.find({"name": /John/}), it gave me output -
+   { _id: ObjectId("6363277a4b5a870c209fdd0e"),
+     employeeid: 1187,
+     name: 'John Steight',
+     salary: 75000 }
+   { _id: ObjectId("6363277a4b5a870c209fdd10"),
+     employeeid: 24113,
+     name: 'Wright John',
+     salary: 65000 }
