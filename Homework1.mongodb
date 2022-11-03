@@ -98,3 +98,30 @@
    db.IT.find() //This command displays all the data present in the IT collection
    db.Marketing.find() //This command displays all the data present in the Marketing collection
 
+//Exercise Part D
+1. //These insert commands will insert three new data sets to IT collection
+   db.IT.insert({
+    employeeid: 1187,
+    name: "John Steight",
+    salary: 75000
+  })
+  db.IT.insert({
+    employeeid: 2455,
+    name: "Syed",
+    salary: 90000
+  })
+  db.IT.insert({
+    employeeid: 24113,
+    name: "Wright John",
+    salary: 65000 
+  })
+
+2. db.IT.find({employeeid: 1}) //This command finds the data whose emplyeeid is 1 in IT collection 
+   db.Marketing.find({employeeid: 3}) //This command finds the data whose emplyeeid is 3 in Marketing collection
+
+3. db.Accounting.find({name: "Luke Skywalker"}) //This command finds the data whose name is Luke Skywalker in Accounting collection 
+   db.Accounting.find({name: "Syed"}) //This command finds the data whose name is Syed in IT collection 
+
+4. db.IT.find({name: /^John/}) //This command finds the data whose name starts with the word 'John' in IT collection
+
+5. db.IT.find({"name": /John/}) //This command finds the data whose name contains the word 'John' in IT collection
