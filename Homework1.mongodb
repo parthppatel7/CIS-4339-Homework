@@ -2,6 +2,7 @@
 //UH ID# 1837355
 
 //All following code are written and compiled in Mongoose Shell MongoDB 
+//Connect to URL - mongodb://localhost:27017/
 
 // Exercise Part A
 1. use employees //The use command helps to make the 'employees' database.
