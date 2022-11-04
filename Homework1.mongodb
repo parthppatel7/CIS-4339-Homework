@@ -126,3 +126,13 @@
 4. db.IT.find({name: /^John/}) //This command finds the data whose name starts with the word 'John' in IT collection
 
 5. db.IT.find({"name": /John/}) //This command finds the data whose name contains the word 'John' in IT collection
+
+//Exercise Part E
+1. db.zips.find({pop: { $lt: 1500 }}) //This command finds data sets whoose population is less than 1500
+
+2. db.zips.find({city: { $eq: "CHESTER" }}) //This command finds data sets whoose city name is 'CHESTER'
+
+3.db.zips.find({ loc: { $in: [ -84.38570799999999, 45.015207 ]}}) //This command gets data set whoose loc array is '84.38570799999999', '46.015207'
+
+4. db.zips.find({ $or: [ { city: 'WARREN' }, { loc: { $in: [ -80.76424299999999, 41.231819 ]}}]}) //This command gets data sets that match the city ''WARREN' or location '-80.76424299999999', '41.231819'
+
