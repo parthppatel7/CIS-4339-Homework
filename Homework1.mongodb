@@ -136,3 +136,10 @@
 
 4. db.zips.find({ $or: [ { city: 'WARREN' }, { loc: { $in: [ -80.76424299999999, 41.231819 ]}}]}) //This command gets data sets that match the city ''WARREN' or location '-80.76424299999999', '41.231819'
 
+//Exercise Part F
+1. db.employees.find({$where: function() { return (this.salary > 7500) }}) //This command gets data sets that has salary more than 7500
+
+2. db.employees.find({$where: function() { return (this.name == "John") }}) //This command gets data sets that has 'John' in its name field
+
+//Exercise Part G
+1. db.IT.find({},{ name: true, salary: true }) //This command gives only name and salary fields from IT collection
