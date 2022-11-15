@@ -15,6 +15,7 @@
    db.createCollection('test'); //This command helps to create collection named 'test'.
    show dbs //This command helps us to view the new added database'temporary' in the connection.
    show collections //This command helps us to view the new added collection 'test' in the connection.
+   show dbs //This command helps us to view that we have all the databases before dropping the database 'temporary'.
    db.dropDatabase(); //This command helped me to drop the database 'temporary'.
    show dbs //This command helps us to view that we have droped the database 'temporary'.
 
