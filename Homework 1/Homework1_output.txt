@@ -17,6 +17,14 @@ UH ID# 1837355
 
 1. Entering command use tempory, it gave me an output saying - 'switched to db temporary'
    Entering command db.createCollection('test'); it gave me an output saying - { ok: 1 }
+   Entering command show dbs, it gave me an output - 
+   admin                40.00 KiB
+   config               96.00 KiB
+   local                72.00 KiB
+   reporting            80.00 KiB
+   restaurantbookings  144.00 KiB
+   temporary             2.00 KiB
+   employees             2.00 KiB
    Entering command db.dropDatabase();, it gave me an output saying  - { ok: 1, dropped: 'temporary' }
    Entering command show dbs, it gave me an output - 
    admin                40.00 KiB
